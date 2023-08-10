@@ -1,0 +1,59 @@
+{
+    "id": "approvalitemdetails",
+    "schemaVersion": "1.1.0",
+    "name": "approvalItemDetails",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "item_details",
+            "type": "section",
+            "title": "Itemdetails",
+            "content": [
+                {
+                    "id": "Lineitem",
+                    "type": "string",
+                    "label": "LineItem",
+                    "readOnly": true,
+                    "value": "${context.salesOrderDetails.item.lineItem}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "Material",
+                    "type": "string",
+                    "label": "Material",
+                    "readOnly": true,
+                    "value": "${context.salesOrderDetails.item.material}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "Quantity",
+                    "type": "string",
+                    "label": "Quantity",
+                    "readOnly": false,
+                    "value": "${context.salesOrderDetails.item.quantity}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "decline",
+            "text": "Decline",
+            "decisionType": "negative"
+        }
+    ]
+}
