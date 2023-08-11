@@ -184,11 +184,11 @@
 			"classDefinition": "com.sap.bpm.wfs.ServiceTask",
 			"destination": "JuniorsTrainingHTTP",
 			"destinationSource": "consumer",
-			"path": "/A_SalesOrder('SalesOrder')/to_Item",
+			"path": "/A_SalesOrder('${context.SalesOrderHeader.response.d.SalesOrder}')/to_Item",
 			"httpMethod": "POST",
 			"xsrfPath": "/$metadata?sap-client=100",
 			"requestVariable": "${context.SalesOrderItem.request}",
-			"responseVariable": "${context.SalesOrderItem.response}",
+			"responseVariable": "${context.SalesOrderItem.request}",
 			"headers": [{
 				"name": "Accept",
 				"value": "application/json"
@@ -444,14 +444,14 @@
 		},
 		"36a7dd72-799b-46f7-8229-d572d84f5a5d": {
 			"classDefinition": "com.sap.bpm.wfs.ui.SequenceFlowSymbol",
-			"points": "958,-80 1095.25,-80",
+			"points": "958,-80 1125.25,-80",
 			"sourceSymbol": "34960251-ff3d-42c7-b374-12f944f7ead2",
 			"targetSymbol": "b54fd87f-8946-4bac-939d-c7e04d2b126b",
 			"object": "eb4f1069-21ee-4da5-991e-ff58dba53c44"
 		},
 		"b54fd87f-8946-4bac-939d-c7e04d2b126b": {
 			"classDefinition": "com.sap.bpm.wfs.ui.ServiceTaskSymbol",
-			"x": 1045.25,
+			"x": 1075.25,
 			"y": -110,
 			"width": 100,
 			"height": 60,
@@ -459,7 +459,7 @@
 		},
 		"c5760d91-60c0-4e67-9afb-fdb1c3e1c87f": {
 			"classDefinition": "com.sap.bpm.wfs.ui.SequenceFlowSymbol",
-			"points": "1095.25,-80 1213.25,-80 1213.25,101.5",
+			"points": "1125.25,-81 1213.25,-81 1213.25,101.5",
 			"sourceSymbol": "b54fd87f-8946-4bac-939d-c7e04d2b126b",
 			"targetSymbol": "53e54950-7757-4161-82c9-afa7e86cff2c",
 			"object": "0735383e-7f8d-46aa-a7ed-c4b1f934be29"
@@ -496,6 +496,7 @@
 		"62d7f4ed-4063-4c44-af8b-39050bd44926": {
 			"classDefinition": "com.sap.bpm.wfs.LastIDs",
 			"maildefinition": 6,
+			"hubapireference": 4,
 			"sequenceflow": 21,
 			"startevent": 1,
 			"endevent": 1,
