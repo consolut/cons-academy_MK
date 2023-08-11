@@ -17,7 +17,7 @@ var body =
 
 	"DistributionChannel":  $.context.salesOrderDetails.distributionChannel,
 
-	"OrganizationDivision":  $.context.salesOrderDetails.division,
+	"OrganizationDivision":  $.context.salesOrderDetails.division
 
 }
 $.context.SalesOrderHeader.request = body
